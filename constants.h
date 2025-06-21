@@ -1,0 +1,9 @@
+#define SCREEN_WIDTH 1200
+#define SCREEN_HEIGHT 600
+#define GAME_WIDTH 6400
+#define MATRIX_COLUMNS 200
+#define MATRIX_LINES 15
+#define PLAY 1
+#define LEADERBOARD 2
+#define EXIT 3
+#define MAX_VIDAS 6
