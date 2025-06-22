@@ -4,16 +4,7 @@
 #include "raylib.h"
 #include "constants.h"
 #include "prototypes.h"
-
-typedef struct
-{
-  Vector2 position;
-  Vector2 velocity;
-  Texture2D texture;
-  int lives;
-  int speed;
-  int gravity;
-} MEGAMAN;
+#include "structs.h"
 
 int main()
 {
