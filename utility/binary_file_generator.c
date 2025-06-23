@@ -8,7 +8,7 @@ typedef struct
 
 int main()
 {
-  POSICOES leaderboard [5] =
+  POSICOES leaderboard[5] =
   {
     {"MARCELO", 850},
     {"GABRIEL", 800},
@@ -23,9 +23,9 @@ int main()
   if (fp != NULL)
   {
     if(fwrite(leaderboard, sizeof(POSICOES), 5, fp) != 5)
-        printf("ERRO NA LEITURA!");
+      printf("ERRO NA LEITURA!");
     else
-    printf("ARQUIVO LIDO COM SUCESSO!");
+      printf("ARQUIVO LIDO COM SUCESSO!");
   }
   fclose(fp);
 
