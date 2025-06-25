@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-typedef struct
-{
+typedef struct {
   char nomeJog[12];
   int pontuacao;
 } POSICOES;
 
-int main()
-{
-  POSICOES leaderboard[5] =
-  {
+int main() {
+  POSICOES leaderboard[5] = {
     {"MARCELO", 850},
     {"GABRIEL", 800},
     {"FRANCISCO", 600},
@@ -20,8 +17,7 @@ int main()
   FILE *fp;
   fp = fopen("top_scores.bin", "wb");
 
-  if (fp != NULL)
-  {
+  if (fp != NULL) {
     if(fwrite(leaderboard, sizeof(POSICOES), 5, fp) != 5)
       printf("ERRO NA LEITURA!");
     else

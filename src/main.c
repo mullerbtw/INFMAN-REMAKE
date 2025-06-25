@@ -6,8 +6,7 @@
 #include "prototypes.h"
 #include "structs.h"
 
-int main()
-{
+int main() {
   
 }
 

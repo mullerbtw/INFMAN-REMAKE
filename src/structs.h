@@ -1,44 +1,43 @@
 #ifndef structs.h
 #define structs.h
 
-typedef struct
-{
+typedef struct {
   Vector2 position;
   Vector2 velocity;
-  Texture2D texture;
+  Texture2D idle;
+  Texture2D shooting_idle;
+  Texture2D shooting_running;
+  Texture2D running;
+  Texture2D jumping;
+  Texture2D death;
   int lives;
   int speed;
   int gravity;
 } MEGAMAN;
 
-typedef struct ENEMYSTRUCT
-{
+typedef struct ENEMYSTRUCT {
   Vector2 postion;
   Texture2D texture;
 } ENEMY;
 
-typedef struct BOXSTRUCT
-{
+typedef struct BOXSTRUCT {
   Vector2 position;
   Texture2D texture;
 } BOX;
 
-typedef struct SPIKESTRUCT
-{
+typedef struct SPIKESTRUCT {
   Vector2 position;
   Texture2D texture;
 } SPIKE;
 
-typedef struct BACKGROUNDSTRUCT
-{
+typedef struct BACKGROUNDSTRUCT {
   Texture2D texture;
-}
+} BACKGROUND;
 
-typedef struct TIROSTRUCT
-{
+typedef struct TIROSTRUCT {
   Vector2 positon;
   Vector2 velocity;
   Texture2D texture;
-}
+} TIRO;
 
 #endif
