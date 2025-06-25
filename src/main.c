@@ -31,22 +31,22 @@ int GameMenu() {
     DrawText("EXIT", SCREEN_WIDTH / 2.0f - MeasureText("EXIT", 30) / 2.0f,
              440, 30, RAYWHITE);
     Rectangle play_button_rec = (Rectangle) {
-			SCREEN_WIDTH / 2.0f - MeasureText("PLAY", 30) / 2.0f,
-			280, MeasureText("PLAY", 30), 30};
+      SCREEN_WIDTH / 2.0f - MeasureText("PLAY", 30) / 2.0f,
+      280, MeasureText("PLAY", 30), 30};
     Rectangle leaderboard_button_rec = (Rectangle) {
-			SCREEN_WIDTH / 2.0f -  MeasureText("LEADERBOARD", 30) / 2.0f,
-			360, MeasureText("LEADERBOARD", 30), 30};
+      SCREEN_WIDTH / 2.0f -  MeasureText("LEADERBOARD", 30) / 2.0f,
+      360, MeasureText("LEADERBOARD", 30), 30};
     Rectangle exit_button_rec = (Rectangle) {
-			SCREEN_WIDTH / 2.0f - MeasureText("EXIT", 30) / 2.0f,
-			440, MeasureText("EXIT", 30), 30};
+      SCREEN_WIDTH / 2.0f - MeasureText("EXIT", 30) / 2.0f,
+      440, MeasureText("EXIT", 30), 30};
       
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-			if (CheckCollisionPointRec(GetMousePosition(), play_button_rec))
-				return PLAY;
-			if (CheckCollisionPointRec(GetMousePosition(), leaderboard_button_rec))
-				return LEADERBOARD;
-			if (CheckCollisionPointRec(GetMousePosition(), exit_button_rec))
-				return EXIT;
+      if (CheckCollisionPointRec(GetMousePosition(), play_button_rec))
+        return PLAY;
+      if (CheckCollisionPointRec(GetMousePosition(), leaderboard_button_rec))
+        return LEADERBOARD;
+      if (CheckCollisionPointRec(GetMousePosition(), exit_button_rec))
+        return EXIT;
 		}
     EndDrawing();
   }
