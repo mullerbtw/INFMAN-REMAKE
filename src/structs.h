@@ -1,7 +1,6 @@
-#ifndef structs.h
-#define structs.h
+#include "raylib.h"
 
-typedef struct {
+typedef struct MegamanStruct {
   Vector2 position;
   Vector2 velocity;
   Texture2D idle;
@@ -15,29 +14,27 @@ typedef struct {
   int gravity;
 } MEGAMAN;
 
-typedef struct ENEMYSTRUCT {
+typedef struct EnemyStruct {
   Vector2 postion;
   Texture2D texture;
 } ENEMY;
 
-typedef struct BOXSTRUCT {
+typedef struct BoxStruct {
   Vector2 position;
   Texture2D texture;
 } BOX;
 
-typedef struct SPIKESTRUCT {
+typedef struct SpikeStruct {
   Vector2 position;
   Texture2D texture;
 } SPIKE;
 
-typedef struct BACKGROUNDSTRUCT {
+typedef struct BackgroundStruct {
   Texture2D texture;
 } BACKGROUND;
 
-typedef struct TIROSTRUCT {
+typedef struct TiroStruct {
   Vector2 positon;
   Vector2 velocity;
   Texture2D texture;
 } TIRO;
-
-#endif
