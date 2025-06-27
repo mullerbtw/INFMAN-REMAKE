@@ -1,1 +1,2 @@
-int GameMenu(void);
+int GameMenu();
+void OpenLeaderboard();
