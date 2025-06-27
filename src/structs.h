@@ -12,29 +12,34 @@ typedef struct MegamanStruct {
   int lives;
   int speed;
   int gravity;
-} MEGAMAN;
+} MEGAMAN_STRUCT;
 
 typedef struct EnemyStruct {
   Vector2 postion;
   Texture2D texture;
-} ENEMY;
+} ENEMY_STRUCT;
 
 typedef struct BoxStruct {
   Vector2 position;
   Texture2D texture;
-} BOX;
+} BOX_STRUCT;
 
 typedef struct SpikeStruct {
   Vector2 position;
   Texture2D texture;
-} SPIKE;
+} SPIKE_STRUCT;
 
 typedef struct BackgroundStruct {
   Texture2D texture;
-} BACKGROUND;
+} BACKGROUND_STRUCT;
 
 typedef struct TiroStruct {
   Vector2 positon;
   Vector2 velocity;
   Texture2D texture;
-} TIRO;
+} TIRO_STRUCT;
+
+typedef struct LeaderboardStruct {
+  char player_name[12];
+  int score;
+} LEADERBOARD_STRUCT;

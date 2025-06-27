@@ -3,7 +3,8 @@
 #define GAME_WIDTH 6400
 #define MATRIX_COLUMNS 200
 #define MATRIX_LINES 15
-#define PLAY 1
-#define LEADERBOARD 2
-#define EXIT 3
+#define NUMERO_JOG 5
+#define PLAY_RETURN 1
+#define LEADERBOARD_RETURN 2
+#define EXIT_RETURN 3
 #define MAX_VIDAS 6
