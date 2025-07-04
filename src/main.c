@@ -1,3 +1,5 @@
+// TODO: FIX TABS OPENING OVER ONE ANOTHER -> FIXED
+
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
@@ -65,14 +67,18 @@ int GameMenu() {
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
       if (CheckCollisionPointRec(GetMousePosition(),
-          play_button_rectangle))
+          play_button_rectangle)) {
         return PLAY_RETURN;
+      }
       if (CheckCollisionPointRec(GetMousePosition(),
-          leaderboard_button_rectangle))
+          leaderboard_button_rectangle)) {
+        CloseWindow();
         return LEADERBOARD_RETURN;
+      }
       if (CheckCollisionPointRec(GetMousePosition(),
-          exit_button_rectangle))
+          exit_button_rectangle)) {
         return EXIT_RETURN;
+      }
 		}
     EndDrawing();
   }
@@ -124,7 +130,7 @@ void PrintLeaderboard(LEADERBOARD_STRUCT
     EndDrawing();
     }
   CloseWindow();
-  }
+}
 
 void OpenLeaderboard() {
   LEADERBOARD_STRUCT leaderboard_struct[NUMERO_JOGADORES];
@@ -132,12 +138,14 @@ void OpenLeaderboard() {
   PrintLeaderboard(leaderboard_struct);
 }
 
-// TODO: FIX TABS OPENING OVER ONE ANOTHER
 int main() {
   int user_option;
-  user_option = GameMenu();
-  if (user_option == EXIT_RETURN)
-    return 0;
-  if (user_option == LEADERBOARD_RETURN)
-    OpenLeaderboard();
+  while (user_option != EXIT_RETURN) {
+    user_option = GameMenu();
+    if (user_option == PLAY_RETURN)
+      return 0; // FOR NOW ONLY
+    if (user_option == LEADERBOARD_RETURN)
+      OpenLeaderboard();
+  }    
+  return 0; 
 }
