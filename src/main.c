@@ -139,9 +139,11 @@ void OpenLeaderboard() {
 }
 
 int main() {
-  int user_option;
+  int user_option = 0;
   while (user_option != EXIT_RETURN) {
     user_option = GameMenu();
+    if (IsKeyPressed(KEY_ESCAPE))
+      return 0;
     if (user_option == PLAY_RETURN)
       return 0; // FOR NOW ONLY
     if (user_option == LEADERBOARD_RETURN)
