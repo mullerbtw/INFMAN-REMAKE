@@ -41,5 +41,5 @@ typedef struct TiroStruct {
 
 typedef struct LeaderboardStruct {
   char player_name[12];
-  int score;
+  int player_score;
 } LEADERBOARD_STRUCT;
