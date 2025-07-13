@@ -79,7 +79,7 @@ int GameMenu() {
           exit_button_rectangle)) {
         return EXIT_RETURN;
       }
-		}
+    }
     EndDrawing();
   }
   CloseWindow();
@@ -102,27 +102,27 @@ void PrintLeaderboard(LEADERBOARD_STRUCT
 	SetTargetFPS(60);
   while (!WindowShouldClose()) {
     ClearBackground(DARKBLUE);
-    DrawText(leaderboard_struct[0].player_name, SCREEN_WIDTH / 2 -
+    DrawText(leaderboard_struct[0].player_name, SCREEN_WIDTH/2 -
              MeasureText(leaderboard_struct[0].player_name, 10),
              100, 10, WHITE);
     DrawText(TextFormat("%i", leaderboard_struct[0].player_score),
              SCREEN_WIDTH / 2 + 20, 100, 10, WHITE);
-    DrawText(leaderboard_struct[1].player_name, SCREEN_WIDTH / 2 -
+    DrawText(leaderboard_struct[1].player_name, SCREEN_WIDTH/2 -
              MeasureText(leaderboard_struct[1].player_name, 10),
              180, 10, WHITE);
     DrawText(TextFormat("%i", leaderboard_struct[1].player_score),
              SCREEN_WIDTH / 2 + 20, 180, 10, WHITE);
-    DrawText(leaderboard_struct[2].player_name, SCREEN_WIDTH / 2 -
+    DrawText(leaderboard_struct[2].player_name, SCREEN_WIDTH/2 -
              MeasureText(leaderboard_struct[2].player_name, 10),
              260, 10, WHITE);
     DrawText(TextFormat("%i", leaderboard_struct[2].player_score),
              SCREEN_WIDTH / 2 + 20, 260, 10, WHITE);
-    DrawText(leaderboard_struct[3].player_name, SCREEN_WIDTH / 2 -
+    DrawText(leaderboard_struct[3].player_name, SCREEN_WIDTH/2 -
              MeasureText(leaderboard_struct[3].player_name, 10),
              340, 10, WHITE);
     DrawText(TextFormat("%i", leaderboard_struct[3].player_score),
              SCREEN_WIDTH / 2 + 20, 340, 10, WHITE);
-    DrawText(leaderboard_struct[4].player_name, SCREEN_WIDTH / 2 -
+    DrawText(leaderboard_struct[4].player_name, SCREEN_WIDTH/2 -
              MeasureText(leaderboard_struct[4].player_name, 10),
              420, 10, WHITE);
     DrawText(TextFormat("%i", leaderboard_struct[4].player_score),
